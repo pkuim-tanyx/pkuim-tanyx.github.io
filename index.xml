@@ -6,8 +6,15 @@
     <description>Recent content on Ziyuxiao 子羽翛</description>
     <generator>Hugo -- 0.142.0</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 16 Jan 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 Jan 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://pkuim-tanyx.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Test</title>
+      <link>https://pkuim-tanyx.github.io/posts/test/</link>
+      <pubDate>Mon, 27 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://pkuim-tanyx.github.io/posts/test/</guid>
+      <description>function test</description>
+    </item>
     <item>
       <title>Hello World</title>
       <link>https://pkuim-tanyx.github.io/posts/hello-world/</link>
