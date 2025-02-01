@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Emoji on Ziyuxiao 子羽翛</title>
-    <link>http://localhost:1313/tags/emoji/</link>
+    <link>https://pkuim-tanyx.github.io/tags/emoji/</link>
     <description>Recent content in Emoji on Ziyuxiao 子羽翛</description>
     <generator>Hugo -- 0.142.0</generator>
     <language>en</language>
     <lastBuildDate>Mon, 27 Jan 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/emoji/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://pkuim-tanyx.github.io/tags/emoji/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Test</title>
-      <link>http://localhost:1313/posts/test/</link>
+      <link>https://pkuim-tanyx.github.io/posts/test/</link>
       <pubDate>Mon, 27 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/test/</guid>
+      <guid>https://pkuim-tanyx.github.io/posts/test/</guid>
       <description>function test</description>
     </item>
     <item>
       <title>Hello World</title>
-      <link>http://localhost:1313/posts/hello-world/</link>
+      <link>https://pkuim-tanyx.github.io/posts/hello-world/</link>
       <pubDate>Sun, 16 Jan 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/hello-world/</guid>
+      <guid>https://pkuim-tanyx.github.io/posts/hello-world/</guid>
       <description>Guide to Hugo-PaperMod-Template</description>
     </item>
   </channel>
