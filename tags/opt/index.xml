@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Opt on Ziyuxiao 子羽翛</title>
+    <link>https://pkuim-tanyx.github.io/tags/opt/</link>
+    <description>Recent content in Opt on Ziyuxiao 子羽翛</description>
+    <generator>Hugo -- 0.142.0</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 02 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://pkuim-tanyx.github.io/tags/opt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Operational Study Notes (1)</title>
+      <link>https://pkuim-tanyx.github.io/posts/opt_note_1/</link>
+      <pubDate>Sun, 02 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://pkuim-tanyx.github.io/posts/opt_note_1/</guid>
+      <description>Convex Sets and Linear Programming</description>
+    </item>
+  </channel>
+</rss>
