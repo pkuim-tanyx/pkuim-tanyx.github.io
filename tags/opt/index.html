@@ -141,6 +141,28 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Operational Study Notes (2)
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Convex Functions Def. A function $f:S\subseteq\mathbb{R}^n\rightarrow\mathbb{R}^n$ is called convex iff we have $\lambda\in[0,1]$ and different $x_1,\ x_2\in S$ such that
+$$ f(\lambda x_1&#43;(1-\lambda)x_2)\leq \lambda f(x_1)&#43;(1-\lambda)f(x_2) $$
+otherwise, $f(x)$ is called concave. $f(x)$ is convex $\iff -f(x)$ is concave.
+e.g. all $\ell_p$ norms ($\ell_p(x):=\sqrt[p]{\sum_{i=1}^n x_i^p}$) are convex, and $||x||_1\geq||x||2\geq||x||{\infty}$.
+matrix norms:
+3 properties: nonnegativity, homogeneity, triangle inequality
+Frobenius norm: $||A||F=\sqrt{\sum_i\sum_j A{ij}^2}=\sqrt{\text{tr}(A^\top A)}$
+induced norm: $||A||p=\max\limits{||x||_p=1}||Ax||_p$ ($p\in\mathbb{N}^*$)
+$p=1$: $||A||1=\max_j\lbrace\sum_i|A{ij}|\rbrace$
+$p=2$：The maximal singular value of $A$ (namely $\sqrt{\lambda_{\max}(A^\top A)}$)
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-02-12 00:00:00 +0000 UTC'>February 12, 2025</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Ziyuxiao</footer>
+  <a class="entry-link" aria-label="post link to Operational Study Notes (2)" href="https://pkuim-tanyx.github.io/posts/opt_note_2/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Operational Study Notes (1)
     </h2>
   </header>
