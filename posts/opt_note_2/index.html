@@ -100,8 +100,8 @@
   "keywords": [
     "opt"
   ],
-  "articleBody": "Convex Functions Def. A function $f:S\\subseteq\\mathbb{R}^n\\rightarrow\\mathbb{R}^n$ is called convex iff we have $\\lambda\\in[0,1]$ and different $x_1,\\ x_2\\in S$ such that\n$$ f(\\lambda x_1+(1-\\lambda)x_2)\\leq \\lambda f(x_1)+(1-\\lambda)f(x_2) $$\notherwise, $f(x)$ is called concave. $f(x)$ is convex $\\iff -f(x)$ is concave.\ne.g. all $\\ell_p$ norms ($\\ell_p(x):=\\sqrt[p]{\\sum_{i=1}^n x_i^p}$) are convex, and $||x||_1\\geq||x||2\\geq||x||{\\infty}$.\nmatrix norms:\n3 properties: nonnegativity, homogeneity, triangle inequality\nFrobenius norm: $||A||F=\\sqrt{\\sum_i\\sum_j A{ij}^2}=\\sqrt{\\text{tr}(A^\\top A)}$\ninduced norm: $||A||p=\\max\\limits{||x||_p=1}||Ax||_p$ ($p\\in\\mathbb{N}^*$)\n$p=1$: $||A||1=\\max_j\\lbrace\\sum_i|A{ij}|\\rbrace$\n$p=2$：The maximal singular value of $A$ (namely $\\sqrt{\\lambda_{\\max}(A^\\top A)}$)\n$p=\\infty$: $||A||\\infty=\\max_i\\lbrace\\sum_j|A{ij}|\\rbrace$\nDef. For a norm $||\\cdot||_p$, its dual norm is defined as\n$$ ||y||p^*=\\sup{||x||_p\\leq 1}x^\\top y \\textcolor{blue}{=||y||_q\\quad \\left(\\dfrac{1}{p}+\\dfrac{1}{q}=1\\right)} $$\n(This property can be proved by Hölder inequality: $x^\\top y\\leq ||x||_p||y||_q$ where $pq=p+q$)\nProp. (Jensen’s Inequality) If $f$ is convex and $\\sum_{k=1}^n \\theta_k=1$, then\n$$ f\\left(\\sum_{k=1}^n \\theta_kx_k\\right)\\leq \\sum_{k=1}^n \\theta_kf(x_k) $$\nDef. For a real-valued function $f:\\mathbb{R}^n\\rightarrow \\mathbb{R}$, its conjugate function is defined as $f^(z)=\\sup\\limits_{x\\in\\mathbb{R}^n}z^\\top x-f(x)$. Note that $f^$ is always convex, lower semicontinuous, and $f^{**}=f$.\nDef. $\\nabla f(x)=\\left(\\dfrac{\\partial f(x)}{\\partial x_1},\\cdots,\\dfrac{\\partial f(x)}{\\partial x_n}\\right)$, $H_f(x)[i;j]=\\dfrac{\\partial^2 f(x)}{\\partial x_i\\partial x_j}$\nThm. (first order and second order condition)\nIf $f(x)\\in\\mathcal{C}^1$, then $f(x)$ is convex $\\iff f(y)\\geq f(x)+\\nabla f(x)^\\top(y-x)$, $\\forall x,y\\in\\text{dom}f$.\nIf $f(x)\\in\\mathcal{C}^2$, then $f(x)$ is convex $\\iff H_f(x)\\succeq 0$ for all $x\\in\\text{dom}f$.\ne.g. variance function $f(x)=\\text{Var}(\\xi^\\top x)$ where $\\xi^\\top\\bm{1}=1$ is convex by second order condition.\nDef. Given $f(x):S\\subseteq \\mathbb{R}^n\\rightarrow \\mathbb{R}^n$ is a real-valued function, then the epigraph of $f(x)$ is defined as $\\text{epi }f:=\\lbrace (x,t)\\ |\\ f(x)\\leq t\\rbrace$.\n※Prop. $f(x)$ is convex $\\iff \\text{epi }f$ is convex\ne.g. prove that $f(x)=\\ln\\left(\\sum\\limits_{i=1}^n p_i\\exp(a_ix_i+b_i)\\right)$ is convex.\nSome transportation that preserving convexity:\nnonnegative linear combination: $f_1,\\ f_2$ convex $\\implies af_1+bf_2$ convex\npointwise maximum: $f_1,\\ f_2$ convex $\\implies \\max\\lbrace f_1, f_2\\rbrace$ convex\naffine map: $f$ convex $\\implies g=f(Ax+b)$ convex\n$f(x,y)$ convex, $C$ is a convex set $\\implies g(x)=\\inf\\limits_{y\\in C}f(x,y)$ convex\nperspective function: $f$ convex $\\implies g(x,t)=tf\\left(\\dfrac{x}{t}\\right)$ convex\ne.g. fractional linear function is convexity-preserving, namely $f$ convex $\\implies f\\left(\\dfrac{a^\\top x+b}{c^\\top x+d}\\right)$ convex.\nDef. For $x\\in\\text{dom}f$, if $f(x_0)\\leq f(x),\\ \\forall x\\in N_\\varepsilon(x_0)$, then $x_0$ is a local minimum.\nThm. If $f$ is a convex function, then any local minimum equals to global minimum.\nDef. For a real-valued function $f:\\mathbb{R}^n\\rightarrow \\mathbb{R}$,\nif $\\forall x,y\\in\\text{dom}f,\\ \\lambda\\in[0,1]$, $f(\\lambda x+(1-\\lambda)y)\\leq \\max\\lbrace f(x),f(y)\\rbrace$, then $f$ is a quasiconvex function;\nif $\\forall x,y\\in\\text{dom}f,\\ \\exists m\u003e0$ such that $f(y)\\geq f(x)+\\nabla f(x)^\\top (y-x)+\\dfrac{m}{2}||y-x||^2$, then $f$ is a strongly convex function.\nProp.\nFor a quasiconvex function, its sublevel set $S_\\alpha:=\\lbrace x\\in\\text{dom}f\\ |\\ f(x)\\leq \\alpha\\rbrace$ is always convex.\nThe definition of strongly convex is equivalent to $f(x)-\\dfrac{m}{2}x^2$ is convex.\nDef. For a cone $C\\subseteq \\mathbb{R}^n$,\n$P=\\lbrace z\\ |\\ z^\\top x\\leq 0,\\ x\\in C\\rbrace$ is called the polar cone of $C$;\n$\\mathcal{N}_C(x_0)=\\lbrace z\\ |\\ z^\\top(x-x_0)\\leq 0,\\ \\forall x\\in C\\rbrace$ is called the normal cone of $C$ at the point $x_0\\in C$;\nthe polar cone of normal cone at $x_0$ is called tangent cone.\nThm. (Optimality in differentiable case) For a differantiable convex function $f$ and a nonempty convex set $X$, we have\n$$ x^\\in\\mathop{\\arg\\min}\\limits_{x\\in X} \\iff \\nabla f(x^)^\\top (x-x^*)\\geq 0, \\forall x\\in X $$\nNote: If $\\nabla f(x^)=0$, then obviously $x^$ is a local minimum.\nIf $\\nabla f(x^)\\neq 0$, then $-\\nabla f(x^)\\in\\mathcal{N}_C(x^)$, and $-\\nabla f(x^)$ denotes a supporting hyperplane of $X$.\nNote: The FOC can be interpreted by geometric view.\n$$ \\begin{bmatrix} -\\nabla f(x)\\ 1 \\end{bmatrix}^\\top \\left( \\begin{bmatrix} y\\ t \\end{bmatrix}- \\begin{bmatrix} x\\ f(x) \\end{bmatrix}\\right)\\leq 0,\\ \\forall(y,t)\\in\\text{epi }f\n$$\nDef. A vector $s_0$ is called the subgradient at $x_0$ if $f(x)\\geq f(x_0)+s_0^\\top(x-x_0)$.\nNote that if $f(x)$ is differentiable at $x_0$, then the subgradient at $x_0$ is unique, namely the gradient. Otherwise, $\\partial f(x_0)$ will be a set with infinite elements.\nThm. If $f(x)$ is convex, then $\\partial f(x)$ is nonempty and bounded for all $x\\in \\text{intdom} f$.\nThe optimality condition is similar to the situation of differentiable functions.\n",
-  "wordCount" : "612",
+  "articleBody": "Convex Functions Def. A function $f:S\\subseteq\\mathbb{R}^n\\rightarrow\\mathbb{R}^n$ is called convex iff we have $\\lambda\\in[0,1]$ and different $x_1,\\ x_2\\in S$ such that\n$$ f(\\lambda x_1+(1-\\lambda)x_2)\\leq \\lambda f(x_1)+(1-\\lambda)f(x_2) $$\notherwise, $f(x)$ is called concave. $f(x)$ is convex $\\iff -f(x)$ is concave.\ne.g. all $\\ell_p$ norms ($\\ell_p(x):=\\sqrt[p]{\\sum_{i=1}^n x_i^p}$) are convex, and $||x||_1\\geq||x|_2\\geq||x||_{\\infty}$.\nmatrix norms:\n3 properties: nonnegativity, homogeneity, triangle inequality\nFrobenius norm: $||A||_F=\\sqrt{\\sum_i\\sum_j A_{ij}^2}=\\sqrt{\\text{tr}(A^\\top A)}$\ninduced norm: $||A||_p=\\max\\limits_{||x||_p=1}||Ax||_p$ ($p\\in\\mathbb{N}^*$)\n$p=1$: $||A||_1=\\max_j\\lbrace\\sum_i|A_{ij}|\\rbrace$\n$p=2$：The maximal singular value of $A$ (namely $\\sqrt{\\lambda_{\\max}(A^\\top A)}$)\n$p=\\infty$: $||A||_\\infty=\\max_i\\lbrace\\sum_j|A_{ij}|\\rbrace$\nDef. For a norm $||\\cdot||_p$, its dual norm is defined as\n$$ ||y||_p^{*}=\\sup_{||x||_p\\leq 1}x^\\top y \\textcolor{blue}{=||y||_q\\quad \\left(\\dfrac{1}{p}+\\dfrac{1}{q}=1\\right)} $$\n(This property can be proved by Hölder inequality: $x^\\top y\\leq ||x||_p||y||_q$ where $pq=p+q$)\nProp. (Jensen’s Inequality) If $f$ is convex and $\\sum_{k=1}^n \\theta_k=1$, then\n$$ f\\left(\\sum_{k=1}^n \\theta_kx_k\\right)\\leq \\sum_{k=1}^n \\theta_kf(x_k) $$\nDef. For a real-valued function $f:\\mathbb{R}^n\\rightarrow \\mathbb{R}$, its conjugate function is defined as $f^{*}(z)=\\sup\\limits_{x\\in\\mathbb{R}^n}z^\\top x-f(x)$. Note that $f^{*}$ is always convex, lower semicontinuous, and $f^{**}=f$.\nDef. $\\nabla f(x)=\\left(\\dfrac{\\partial f(x)}{\\partial x_1},\\cdots,\\dfrac{\\partial f(x)}{\\partial x_n}\\right)$, $H_f(x)[i;j]=\\dfrac{\\partial^2 f(x)}{\\partial x_i\\partial x_j}$\nThm. (first order and second order condition)\nIf $f(x)\\in\\mathcal{C}^1$, then $f(x)$ is convex $\\iff f(y)\\geq f(x)+\\nabla f(x)^\\top(y-x)$, $\\forall x,y\\in\\text{dom}f$.\nIf $f(x)\\in\\mathcal{C}^2$, then $f(x)$ is convex $\\iff H_f(x)\\succeq 0$ for all $x\\in\\text{dom}f$.\ne.g. variance function $f(x)=\\text{Var}(\\xi^\\top x)$ where $\\xi^\\top\\mathbf{1}=1$ is convex by second order condition.\nDef. Given $f(x):S\\subseteq \\mathbb{R}^n\\rightarrow \\mathbb{R}^n$ is a real-valued function, then the epigraph of $f(x)$ is defined as $\\text{epi }f:=\\lbrace (x,t)\\ |\\ f(x)\\leq t\\rbrace$.\n※Prop. $f(x)$ is convex $\\iff \\text{epi }f$ is convex\ne.g. prove that $f(x)=\\ln\\left(\\sum\\limits_{i=1}^n p_i\\exp(a_ix_i+b_i)\\right)$ is convex.\nSome transportation that preserving convexity:\nnonnegative linear combination: $f_1,\\ f_2$ convex $\\implies af_1+bf_2$ convex\npointwise maximum: $f_1,\\ f_2$ convex $\\implies \\max\\lbrace f_1, f_2\\rbrace$ convex\naffine map: $f$ convex $\\implies g=f(Ax+b)$ convex\n$f(x,y)$ convex, $C$ is a convex set $\\implies g(x)=\\inf\\limits_{y\\in C}f(x,y)$ convex\nperspective function: $f$ convex $\\implies g(x,t)=tf\\left(\\dfrac{x}{t}\\right)$ convex\ne.g. fractional linear function is convexity-preserving, namely $f$ convex $\\implies f\\left(\\dfrac{a^\\top x+b}{c^\\top x+d}\\right)$ convex.\nDef. For $x\\in\\text{dom}f$, if $f(x_0)\\leq f(x),\\ \\forall x\\in N_\\varepsilon(x_0)$, then $x_0$ is a local minimum.\nThm. If $f$ is a convex function, then any local minimum equals to global minimum.\nDef. For a real-valued function $f:\\mathbb{R}^n\\rightarrow \\mathbb{R}$,\nif $\\forall x,y\\in\\text{dom}f,\\ \\lambda\\in[0,1]$, $f(\\lambda x+(1-\\lambda)y)\\leq \\max\\lbrace f(x),f(y)\\rbrace$, then $f$ is a quasiconvex function;\nif $\\forall x,y\\in\\text{dom}f,\\ \\exists m\u003e0$ such that $f(y)\\geq f(x)+\\nabla f(x)^\\top (y-x)+\\dfrac{m}{2}||y-x||^2$, then $f$ is a strongly convex function.\nProp.\nFor a quasiconvex function, its sublevel set $S_\\alpha:=\\lbrace x\\in\\text{dom}f\\ |\\ f(x)\\leq \\alpha\\rbrace$ is always convex.\nThe definition of strongly convex is equivalent to $f(x)-\\dfrac{m}{2}x^2$ is convex.\nDef. For a cone $C\\subseteq \\mathbb{R}^n$,\n$P=\\lbrace z\\ |\\ z^\\top x\\leq 0,\\ x\\in C\\rbrace$ is called the polar cone of $C$;\n$\\mathcal{N}_C(x_0)=\\lbrace z\\ |\\ z^\\top(x-x_0)\\leq 0,\\ \\forall x\\in C\\rbrace$ is called the normal cone of $C$ at the point $x_0\\in C$;\nthe polar cone of normal cone at $x_0$ is called tangent cone.\nThm. (Optimality in differentiable case) For a differantiable convex function $f$ and a nonempty convex set $X$, we have\n$$ x^*\\in\\mathop{\\arg\\min}\\limits_{x\\in X} \\iff \\nabla f(x^{*})^\\top (x-x^{*})\\geq 0, \\forall x\\in X $$\nNote: If $\\nabla f(x^*)=0$, then obviously $x^*$ is a local minimum.\nIf $\\nabla f(x^*)\\neq 0$, then $-\\nabla f(x^{*})\\in\\mathcal{N}_C(x^{*})$, and $-\\nabla f(x^*)$ denotes a supporting hyperplane of $X$.\nNote: The FOC can be interpreted by geometric view.\nDef. A vector $s_0$ is called the subgradient at $x_0$ if $f(x)\\geq f(x_0)+s_0^\\top(x-x_0)$.\nNote that if $f(x)$ is differentiable at $x_0$, then the subgradient at $x_0$ is unique, namely the gradient. Otherwise, $\\partial f(x_0)$ will be a set with infinite elements.\nThm. If $f(x)$ is convex, then $\\partial f(x)$ is nonempty and bounded for all $x\\in \\text{intdom} f$.\nThe optimality condition is similar to the situation of differentiable functions.\nProp. The subgradient can be regarded as the most exact linear estimation of convex function $f(x)$, which is also called “oracle inequality”.\n",
+  "wordCount" : "615",
   "inLanguage": "en",
   "datePublished": "2025-02-12T00:00:00Z",
   "dateModified": "2025-02-12T00:00:00Z",
@@ -129,11 +129,30 @@
   MathJax = {
     tex: {
       displayMath: [['$$', '$$']],  
-      inlineMath: [['$', '$']]   
+      inlineMath: [['$', '$']],   
+      processEscapes: true    
     }
   };
 </script>
-
+<script>
+  MathJax.startup.promise.then(() => {
+      
+      const all = document.querySelectorAll('.mjx-container');
+      all.forEach((mathElement) => {
+          
+          mathElement.parentNode.classList.add('has-jax');
+      });
+  });
+</script>
+<style>
+  code.has-jax {
+      font: inherit;
+      font-size: 100%;
+      background: inherit;
+      border: inherit;
+      color: #515151;
+  }
+  </style>
     
 </head>
 
@@ -235,40 +254,40 @@
 f(\lambda x_1+(1-\lambda)x_2)\leq \lambda f(x_1)+(1-\lambda)f(x_2)
 $$</p>
 <p>otherwise, $f(x)$ is called <u>concave</u>. $f(x)$ is convex $\iff -f(x)$ is concave.</p>
-<p>e.g. all $\ell_p$ norms ($\ell_p(x):=\sqrt[p]{\sum_{i=1}^n x_i^p}$) are convex, and $||x||_1\geq||x||<em>2\geq||x||</em>{\infty}$.</p>
+<p>e.g. all $\ell_p$ norms ($\ell_p(x):=\sqrt[p]{\sum_{i=1}^n x_i^p}$) are convex, and $||x||_1\geq||x|_2\geq||x||_{\infty}$.</p>
 <p><strong>matrix norms:</strong></p>
 <ul>
 <li>
 <p>3 properties: nonnegativity, homogeneity, triangle inequality</p>
 </li>
 <li>
-<p>Frobenius norm: $||A||<em>F=\sqrt{\sum_i\sum_j A</em>{ij}^2}=\sqrt{\text{tr}(A^\top A)}$</p>
+<p>Frobenius norm: $||A||_F=\sqrt{\sum_i\sum_j A_{ij}^2}=\sqrt{\text{tr}(A^\top A)}$</p>
 </li>
 <li>
-<p>induced norm: $||A||<em>p=\max\limits</em>{||x||_p=1}||Ax||_p$ ($p\in\mathbb{N}^*$)</p>
+<p>induced norm: $||A||_p=\max\limits_{||x||_p=1}||Ax||_p$ ($p\in\mathbb{N}^*$)</p>
 <ul>
 <li>
-<p>$p=1$: $||A||<em>1=\max_j\lbrace\sum_i|A</em>{ij}|\rbrace$</p>
+<p>$p=1$: $||A||_1=\max_j\lbrace\sum_i|A_{ij}|\rbrace$</p>
 </li>
 <li>
 <p>$p=2$：The maximal <u>singular value</u> of $A$ (namely $\sqrt{\lambda_{\max}(A^\top A)}$)</p>
 </li>
 <li>
-<p>$p=\infty$: $||A||<em>\infty=\max_i\lbrace\sum_j|A</em>{ij}|\rbrace$</p>
+<p>$p=\infty$: $||A||_\infty=\max_i\lbrace\sum_j|A_{ij}|\rbrace$</p>
 </li>
 </ul>
 </li>
 </ul>
 <p><strong>Def.</strong> For a norm $||\cdot||_p$, its <u>dual norm</u> is defined as</p>
 <p>$$
-||y||<em>p^*=\sup</em>{||x||_p\leq 1}x^\top y \textcolor{blue}{=||y||_q\quad \left(\dfrac{1}{p}+\dfrac{1}{q}=1\right)}
+||y||_p^{*}=\sup_{||x||_p\leq 1}x^\top y \textcolor{blue}{=||y||_q\quad \left(\dfrac{1}{p}+\dfrac{1}{q}=1\right)}
 $$</p>
 <p>(<em>This property can be proved by Hölder inequality:</em> $x^\top y\leq ||x||_p||y||_q$ where $pq=p+q$)</p>
 <p><strong>Prop.</strong> (<em>Jensen&rsquo;s Inequality</em>) If $f$ is convex and $\sum_{k=1}^n \theta_k=1$, then</p>
 <p>$$
 f\left(\sum_{k=1}^n \theta_kx_k\right)\leq \sum_{k=1}^n \theta_kf(x_k)
 $$</p>
-<p><strong>Def.</strong> For a real-valued function $f:\mathbb{R}^n\rightarrow \mathbb{R}$, its <u>conjugate function</u> is defined as $f^<em>(z)=\sup\limits_{x\in\mathbb{R}^n}z^\top x-f(x)$. Note that $f^</em>$ is always convex, lower semicontinuous, and $f^{**}=f$.</p>
+<p><strong>Def.</strong> For a real-valued function $f:\mathbb{R}^n\rightarrow \mathbb{R}$, its <u>conjugate function</u> is defined as $f^{*}(z)=\sup\limits_{x\in\mathbb{R}^n}z^\top x-f(x)$. Note that $f^{*}$ is always convex, lower semicontinuous, and $f^{**}=f$.</p>
 <br>
 <p><strong>Def.</strong> $\nabla f(x)=\left(\dfrac{\partial f(x)}{\partial x_1},\cdots,\dfrac{\partial f(x)}{\partial x_n}\right)$, $H_f(x)[i;j]=\dfrac{\partial^2 f(x)}{\partial x_i\partial x_j}$</p>
 <p><strong>Thm.</strong> (<em>first order and second order condition</em>)</p>
@@ -280,7 +299,7 @@ $$</p>
 <p>If $f(x)\in\mathcal{C}^2$, then $f(x)$ is convex $\iff H_f(x)\succeq 0$ for all $x\in\text{dom}f$.</p>
 </li>
 </ul>
-<p>e.g. variance function $f(x)=\text{Var}(\xi^\top x)$ where $\xi^\top\bm{1}=1$ is convex by second order condition.</p>
+<p>e.g. variance function $f(x)=\text{Var}(\xi^\top x)$ where $\xi^\top\mathbf{1}=1$ is convex by second order condition.</p>
 <p><strong>Def.</strong> Given $f(x):S\subseteq \mathbb{R}^n\rightarrow \mathbb{R}^n$ is a real-valued function, then the <u>epigraph</u> of $f(x)$ is defined as $\text{epi }f:=\lbrace (x,t)\ |\ f(x)\leq t\rbrace$.</p>
 <p><strong>※Prop.</strong> $f(x)$ is convex $\iff \text{epi }f$ is convex</p>
 <p>e.g. prove that $f(x)=\ln\left(\sum\limits_{i=1}^n p_i\exp(a_ix_i+b_i)\right)$ is convex.</p>
@@ -338,23 +357,12 @@ $$</p>
 </ul>
 <p><strong>Thm.</strong> (<em>Optimality in differentiable case</em>) For a differantiable convex function $f$ and a nonempty convex set $X$, we have</p>
 <p>$$
-x^<em>\in\mathop{\arg\min}\limits_{x\in X} \iff \nabla f(x^</em>)^\top (x-x^*)\geq 0, \forall x\in X
+x^*\in\mathop{\arg\min}\limits_{x\in X} \iff \nabla f(x^{*})^\top (x-x^{*})\geq 0, \forall x\in X
 $$</p>
-<p><em>Note</em>: If $\nabla f(x^<em>)=0$, then obviously $x^</em>$ is a local minimum.</p>
-<p>If $\nabla f(x^<em>)\neq 0$, then $-\nabla f(x^</em>)\in\mathcal{N}_C(x^<em>)$, and $-\nabla f(x^</em>)$ denotes a <u>supporting hyperplane</u> of $X$.</p>
+<p><em>Note</em>: If $\nabla f(x^*)=0$, then obviously $x^*$ is a local minimum.</p>
+<p>If $\nabla f(x^*)\neq 0$, then $-\nabla f(x^{*})\in\mathcal{N}_C(x^{*})$, and $-\nabla f(x^*)$ denotes a <u>supporting hyperplane</u> of $X$.</p>
 <p><em>Note</em>: The FOC can be interpreted by geometric view.</p>
-<p>$$
-\begin{bmatrix}
--\nabla f(x)\ 1
-\end{bmatrix}^\top \left(
-\begin{bmatrix}
-y\ t
-\end{bmatrix}-
-\begin{bmatrix}
-x\ f(x)
-\end{bmatrix}\right)\leq 0,\ \forall(y,t)\in\text{epi }f</p>
-<p>$$</p>
-<br>
+<p><img alt="loading-ag-277" loading="lazy" src="/img/opt2_prop7.png"></p>
 <p><strong>Def.</strong> A vector $s_0$ is called the <u>subgradient</u> at $x_0$ if $f(x)\geq f(x_0)+s_0^\top(x-x_0)$.</p>
 <p>Note that if $f(x)$ is differentiable at $x_0$, then the subgradient at $x_0$ is <u>unique</u>, namely the gradient. Otherwise, $\partial f(x_0)$ will be a set with infinite elements.</p>
 <p><strong>Thm.</strong> If $f(x)$ is convex, then $\partial f(x)$ is nonempty and bounded for all $x\in \text{intdom} f$.</p>
@@ -362,6 +370,7 @@ x\ f(x)
 <p><img alt="loading-ag-264" loading="lazy" src="/img/opt2_thm23.png"></p>
 <p><img alt="loading-ag-268" loading="lazy" src="/img/opt2_thm24.png"></p>
 <p><img alt="loading-ag-275" loading="lazy" src="/img/opt2_thm25.png"></p>
+<p><strong>Prop.</strong> The subgradient can be regarded as the <u>most exact linear estimation</u> of convex function $f(x)$, which is also called &ldquo;<u>oracle inequality</u>&rdquo;.</p>
 
 
   </div>

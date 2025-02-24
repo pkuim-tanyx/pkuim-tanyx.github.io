@@ -148,12 +148,12 @@
     <p>Convex Functions Def. A function $f:S\subseteq\mathbb{R}^n\rightarrow\mathbb{R}^n$ is called convex iff we have $\lambda\in[0,1]$ and different $x_1,\ x_2\in S$ such that
 $$ f(\lambda x_1&#43;(1-\lambda)x_2)\leq \lambda f(x_1)&#43;(1-\lambda)f(x_2) $$
 otherwise, $f(x)$ is called concave. $f(x)$ is convex $\iff -f(x)$ is concave.
-e.g. all $\ell_p$ norms ($\ell_p(x):=\sqrt[p]{\sum_{i=1}^n x_i^p}$) are convex, and $||x||_1\geq||x||2\geq||x||{\infty}$.
+e.g. all $\ell_p$ norms ($\ell_p(x):=\sqrt[p]{\sum_{i=1}^n x_i^p}$) are convex, and $||x||_1\geq||x|_2\geq||x||_{\infty}$.
 matrix norms:
 3 properties: nonnegativity, homogeneity, triangle inequality
-Frobenius norm: $||A||F=\sqrt{\sum_i\sum_j A{ij}^2}=\sqrt{\text{tr}(A^\top A)}$
-induced norm: $||A||p=\max\limits{||x||_p=1}||Ax||_p$ ($p\in\mathbb{N}^*$)
-$p=1$: $||A||1=\max_j\lbrace\sum_i|A{ij}|\rbrace$
+Frobenius norm: $||A||_F=\sqrt{\sum_i\sum_j A_{ij}^2}=\sqrt{\text{tr}(A^\top A)}$
+induced norm: $||A||_p=\max\limits_{||x||_p=1}||Ax||_p$ ($p\in\mathbb{N}^*$)
+$p=1$: $||A||_1=\max_j\lbrace\sum_i|A_{ij}|\rbrace$
 $p=2$：The maximal singular value of $A$ (namely $\sqrt{\lambda_{\max}(A^\top A)}$)
 ...</p>
   </div>
