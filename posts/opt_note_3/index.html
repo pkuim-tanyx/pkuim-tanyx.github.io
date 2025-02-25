@@ -5,11 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Hello World | Ziyuxiao 子羽翛</title>
-<meta name="keywords" content="emoji">
-<meta name="description" content="Guide to Hugo-PaperMod-Template">
-<meta name="author" content="BeiYu">
-<link rel="canonical" href="https://pkuim-tanyx.github.io/posts/hello-world/">
+<title>Operational Study Notes (3) | Ziyuxiao 子羽翛</title>
+<meta name="keywords" content="opt">
+<meta name="description" content="Dual Theory">
+<meta name="author" content="Ziyuxiao">
+<link rel="canonical" href="https://pkuim-tanyx.github.io/posts/opt_note_3/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://pkuim-tanyx.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://pkuim-tanyx.github.io/favicon-16x16.png">
@@ -18,7 +18,7 @@
 <link rel="mask-icon" href="https://pkuim-tanyx.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://pkuim-tanyx.github.io/posts/hello-world/">
+<link rel="alternate" hreflang="en" href="https://pkuim-tanyx.github.io/posts/opt_note_3/">
 <noscript>
     <style>
         #theme-toggle,
@@ -55,19 +55,19 @@
         }
 
     </style>
-</noscript><meta property="og:url" content="https://pkuim-tanyx.github.io/posts/hello-world/">
+</noscript><meta property="og:url" content="https://pkuim-tanyx.github.io/posts/opt_note_3/">
   <meta property="og:site_name" content="Ziyuxiao 子羽翛">
-  <meta property="og:title" content="Hello World">
-  <meta property="og:description" content="Guide to Hugo-PaperMod-Template">
+  <meta property="og:title" content="Operational Study Notes (3)">
+  <meta property="og:description" content="Dual Theory">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2022-01-16T00:00:00+00:00">
-    <meta property="article:modified_time" content="2022-01-16T00:00:00+00:00">
-    <meta property="article:tag" content="Emoji">
+    <meta property="article:published_time" content="2025-02-24T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-02-24T00:00:00+00:00">
+    <meta property="article:tag" content="Opt">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Guide to Hugo-PaperMod-Template">
+<meta name="twitter:title" content="Operational Study Notes (3)">
+<meta name="twitter:description" content="Dual Theory">
 
 
 <script type="application/ld+json">
@@ -84,8 +84,8 @@
     {
       "@type": "ListItem",
       "position":  2 ,
-      "name": "Hello World",
-      "item": "https://pkuim-tanyx.github.io/posts/hello-world/"
+      "name": "Operational Study Notes (3)",
+      "item": "https://pkuim-tanyx.github.io/posts/opt_note_3/"
     }
   ]
 }
@@ -94,24 +94,24 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Hello World",
-  "name": "Hello World",
-  "description": "Guide to Hugo-PaperMod-Template",
+  "headline": "Operational Study Notes (3)",
+  "name": "Operational Study Notes (3)",
+  "description": "Dual Theory",
   "keywords": [
-    "emoji"
+    "opt"
   ],
-  "articleBody": "Markdown 本文件引用自github @beiyuouo\n标题 共有6级标题\nH1 H2 H3 H4 H5 H6 段落 这是第一段，bulabulabula\n这是第二段，bulabulabula\n引用 这是行内引用inline\n这是一个段引用和脚标的栗子\n— 出处1\n表格 Name Age Bob 27 Alice 23 代码块 import os print(\"hello world\") 列表 有序列表 First item Second item Third item 无序列表 List item Another item And another item KaTeX Inline math: \\(\\varphi = \\dfrac{1+\\sqrt5}{2}= 1.6180339887…\\) Block math:\n$$ \\varphi = 1+\\frac{1} {1+\\frac{1} {1+\\frac{1} {1+\\cdots} } } $$\nEmoji 可以直接输入Emoji表情，或者使用shortcode\n🙈 :see_no_evil: 🙉 :hear_no_evil: 🙊 :speak_no_evil:\n插入图片 将需要的图片存放在static/img文件夹下，引用时使用![](/img/图片名)命令。\n夜间模式 RSS link\n这是一个脚标的栗子 ↩︎\n",
-  "wordCount" : "80",
+  "articleBody": "Dual Theory of LP Origin of dual problem Consider a LP with standard form:\n$$ \\begin{align*} \\min\\ \u0026 c^\\top x\\ \\text{s.t. } \u0026 Ax=b\\ \u0026 x\\geq 0 \\end{align*} $$\nWe can surrogate the objective function by introducing constraint penalty:\n$$ \\begin{align*} \\min_x\\ \u0026 c^\\top x+\\lambda^\\top(b-Ax)\\ \\text{s.t. } \u0026 x\\geq 0 \\end{align*} $$\nDenote $g(\\lambda):=c^\\top x+\\lambda^\\top(b-Ax)$, then $g(\\lambda)\\leq f(x)$ for all $\\lambda$. Therefore, we need to maxmize $g(\\lambda)$ to obtain the tightest lower bound. Notice that\n$$ g(\\lambda)=(c^\\top-\\lambda^\\top A)x+\\lambda^\\top b= \\begin{cases} -\\infty, \u0026 \\text{if }c^\\top-\\lambda^\\top A\u003c0;\\ \\lambda^\\top b, \u0026 \\text{if }c^\\top-\\lambda^\\top A\\geq 0. \\end{cases} $$\nthen the dual problem is\n$$ \\begin{align*} \\max\\ \u0026 \\lambda^\\top b\\ \\text{s.t. } \u0026 \\lambda^\\top A\\leq c^\\top \\end{align*} $$\nHow to write the dual of LP quickly? Properties of dual Suppose $x^*$ and $p^*$ are the optimal solution of (P) and (D) respectively.\nWeak duality: $c^\\top x^*\\geq p^{*\\top}b$.\nStrong duality: If $x^*$ is finite, then $p^*$ is finite, and $c^\\top x^*= p^{*\\top}b$.\nCorollary: (P) unbounded $\\implies$ (D) infeasible, (P) infeasible $\\implies$ (D) unbounded or infeasible. Complementary slackness: $(x^*,p^*)$ is optimal $\\iff p_i^*(a_i^\\top x^*-b)=0$ and $(c_j-p_j^{*\\top}A_j)x^*=0$.\nLagrangian duality Consider the following problem:\n$$ \\begin{align*} p^*:=\\min\\ \u0026 f(x)\\ \\text{s.t. } \u0026 g_i(x)\\leq 0,\\ i\\in[m];\\ \u0026 h_j(x)=0,\\ j\\in[n]. \\end{align*} $$\nIts Lagrangian function is defined as\n$$ L(\\lambda,\\mu)=\\inf_x\\lbrace f(x)+\\sum_{i\\in[m]}\\lambda_i g_i(x)+\\sum_{j\\in[n]}\\mu_j h_j(x)\\rbrace $$\nDenote $d^*:=\\sup\\limits_{\\lambda,\\mu}L(\\lambda,\\mu)$, then $p^*\\geq d^*$ by weak duality.\nIf $f(x)$ is convex and local minimum satisfies some constraint qualifications (abbreviated as CQs), then strong duality will hold.\ne.g. Slater condition, LICQ, MFCQ…\nNote: The Lagrangian dual is always convex, and sometimes it is easier to be tackled.\nDef. If $(x^*,\\lambda^*,\\mu^*)$ satisfies\n$$ \\sup_{\\lambda,\\mu\\geq 0}L(x^*,\\lambda,\\mu)\\leq L(x^*,\\lambda^*,\\mu^*) \\leq \\inf_{x}L(x,\\lambda^*,\\mu^*) $$\n,then it is called a saddle point.\nThm. $(x^*,\\lambda^*,\\mu^*)$ is optimal $\\iff (x^*,\\lambda^*,\\mu^*)$ is a saddle point.\nContent of KKT condition $g_i(x^*)\\leq 0,\\ i\\in[m]$ (primal feasibility)\n$h_j(x^*)=0,\\ j\\in[n]$ (primal feasibility)\n$\\lambda_i^*\\geq 0,\\ i\\in[m]$ (dual feasibility)\n$\\mu_j^*\\in\\mathbb{R},\\ j\\in[n]$ (dual feasibility)\n$\\nabla f(x^*)+\\lambda^{*\\top}\\mathbf{J}_g(x^*)+\\mu^{*\\top}\\mathbf{J}_h(x^*)=\\mathbf{0}$ (FOC of Lagrangian function)\n$\\lambda^{*\\top}g(x^*)=0$ (complementary slackness)\noptimal solution $\\implies$ KKT point is obvious, but the opposite direction is not easy to prove. But fortunately, if $f(x)$ is convex, then opposite direction holds.\nConic dual The rule of constructing LP’s dual problem can be easily applied on conic programming:\n$$ \\begin{align*} \\text{(P) } \\min\\ \u0026 c^\\top x\\ \\text{s.t. } \u0026 Ax\\succcurlyeq_{\\mathcal{K}}b \\end{align*}\n\\\n\\begin{align*} \\text{(D) } \\min\\ \u0026 p^\\top b\\ \\text{s.t. } \u0026 p^\\top A=c^\\top\\ \u0026 p\\succcurlyeq_{\\mathcal{K^*}}0 \\end{align*} $$\nwhere $Ax\\succcurlyeq_{\\mathcal{K}}b$ means $Ax-b\\in\\mathcal{K}$ ($\\mathcal{K}$ is a cone), and $\\mathcal{K}^*:=\\lbrace y\\ |\\ y^\\top x\\geq 0,\\ x\\in\\mathcal{K}\\rbrace$ denotes the dual cone.\n",
+  "wordCount" : "411",
   "inLanguage": "en",
-  "datePublished": "2022-01-16T00:00:00Z",
-  "dateModified": "2022-01-16T00:00:00Z",
+  "datePublished": "2025-02-24T00:00:00Z",
+  "dateModified": "2025-02-24T00:00:00Z",
   "author":{
     "@type": "Person",
-    "name": "BeiYu"
+    "name": "Ziyuxiao"
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://pkuim-tanyx.github.io/posts/hello-world/"
+    "@id": "https://pkuim-tanyx.github.io/posts/opt_note_3/"
   },
   "publisher": {
     "@type": "Organization",
@@ -205,135 +205,180 @@
 
 <article class="post-single">
   <header class="post-header">
-    
+    <div class="breadcrumbs"><a href="https://pkuim-tanyx.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://pkuim-tanyx.github.io/posts/">Posts</a></div>
     <h1 class="post-title entry-hint-parent">
-      Hello World
+      Operational Study Notes (3)
     </h1>
     <div class="post-description">
-      Guide to Hugo-PaperMod-Template
+      Dual Theory
     </div>
-    <div class="post-meta"><span title='2022-01-16 00:00:00 +0000 UTC'>January 16, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;BeiYu
+    <div class="post-meta"><span title='2025-02-24 00:00:00 +0000 UTC'>February 24, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Ziyuxiao
 
 </div>
-  </header> 
-  <div class="post-content"><h1 id="markdown">Markdown<a hidden class="anchor" aria-hidden="true" href="#markdown">#</a></h1>
-<blockquote>
-<p>本文件引用自github <a href="https://github.com/beiyuouo">@beiyuouo</a></p>
-</blockquote>
-<h2 id="标题">标题<a hidden class="anchor" aria-hidden="true" href="#标题">#</a></h2>
-<p>共有6级标题</p>
-<h1 id="h1">H1<a hidden class="anchor" aria-hidden="true" href="#h1">#</a></h1>
-<h2 id="h2">H2<a hidden class="anchor" aria-hidden="true" href="#h2">#</a></h2>
-<h3 id="h3">H3<a hidden class="anchor" aria-hidden="true" href="#h3">#</a></h3>
-<h4 id="h4">H4<a hidden class="anchor" aria-hidden="true" href="#h4">#</a></h4>
-<h5 id="h5">H5<a hidden class="anchor" aria-hidden="true" href="#h5">#</a></h5>
-<h6 id="h6">H6<a hidden class="anchor" aria-hidden="true" href="#h6">#</a></h6>
-<h2 id="段落">段落<a hidden class="anchor" aria-hidden="true" href="#段落">#</a></h2>
-<p>这是第一段，bulabulabula</p>
-<p>这是第二段，bulabulabula</p>
-<h2 id="引用">引用<a hidden class="anchor" aria-hidden="true" href="#引用">#</a></h2>
-<p>这是行内引用<code>inline</code></p>
-<blockquote>
-<p>这是一个段引用和脚标的栗子</p>
-<p>— <cite>出处<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></cite></p>
-</blockquote>
-<h2 id="表格">表格<a hidden class="anchor" aria-hidden="true" href="#表格">#</a></h2>
-<table>
-  <thead>
-      <tr>
-          <th>Name</th>
-          <th>Age</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Bob</td>
-          <td>27</td>
-      </tr>
-      <tr>
-          <td>Alice</td>
-          <td>23</td>
-      </tr>
-  </tbody>
-</table>
-<h2 id="代码块">代码块<a hidden class="anchor" aria-hidden="true" href="#代码块">#</a></h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> os
-</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;hello world&#34;</span>)
-</span></span></code></pre></div><h2 id="列表">列表<a hidden class="anchor" aria-hidden="true" href="#列表">#</a></h2>
-<h4 id="有序列表">有序列表<a hidden class="anchor" aria-hidden="true" href="#有序列表">#</a></h4>
-<ol>
-<li>First item</li>
-<li>Second item</li>
-<li>Third item</li>
-</ol>
-<h4 id="无序列表">无序列表<a hidden class="anchor" aria-hidden="true" href="#无序列表">#</a></h4>
-<ul>
-<li>List item</li>
-<li>Another item</li>
-<li>And another item</li>
-</ul>
-<h2 id="katex">KaTeX<a hidden class="anchor" aria-hidden="true" href="#katex">#</a></h2>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
 
+        <div class="inner"><ul>
+                <li>
+                    <a href="#dual-theory-of-lp" aria-label="Dual Theory of LP">Dual Theory of LP</a><ul>
+                        
+                <li>
+                    <a href="#origin-of-dual-problem" aria-label="Origin of dual problem">Origin of dual problem</a></li>
+                <li>
+                    <a href="#how-to-write-the-dual-of-lp-quickly" aria-label="How to write the dual of LP quickly?">How to write the dual of LP quickly?</a></li>
+                <li>
+                    <a href="#properties-of-dual" aria-label="Properties of dual">Properties of dual</a></li></ul>
+                </li>
+                <li>
+                    <a href="#lagrangian-duality" aria-label="Lagrangian duality">Lagrangian duality</a><ul>
+                        
+                <li>
+                    <a href="#content-of-kkt-condition" aria-label="Content of KKT condition">Content of KKT condition</a></li></ul>
+                </li>
+                <li>
+                    <a href="#conic-dual" aria-label="Conic dual">Conic dual</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
 
-
-<!-- KaTeX -->
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
-
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
-
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
-
-
-
-
-
-<p>
-Inline math: \(\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…\)
-</p>
-
-<p>Block math:</p>
+  <div class="post-content"><h3 id="dual-theory-of-lp">Dual Theory of LP<a hidden class="anchor" aria-hidden="true" href="#dual-theory-of-lp">#</a></h3>
+<h4 id="origin-of-dual-problem">Origin of dual problem<a hidden class="anchor" aria-hidden="true" href="#origin-of-dual-problem">#</a></h4>
+<p>Consider a LP with standard form:</p>
 <p>$$
-\varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } }
+\begin{align*}
+\min\ &amp; c^\top x\
+\text{s.t. } &amp; Ax=b\
+&amp; x\geq 0
+\end{align*}
 $$</p>
-<h2 id="emoji">Emoji<a hidden class="anchor" aria-hidden="true" href="#emoji">#</a></h2>
-<p>可以直接输入Emoji表情，或者使用<a href="http://www.emoji-cheat-sheet.com/">shortcode</a></p>
-<p><span class="nowrap"><span class="emojify">🙈</span> <code>:see_no_evil:</code></span>  <span class="nowrap"><span class="emojify">🙉</span> <code>:hear_no_evil:</code></span>  <span class="nowrap"><span class="emojify">🙊</span> <code>:speak_no_evil:</code></span></p>
-<br>
-<h2 id="插入图片">插入图片<a hidden class="anchor" aria-hidden="true" href="#插入图片">#</a></h2>
-<p>将需要的图片存放在<code>static/img</code>文件夹下，引用时使用<code>![](/img/图片名)</code>命令。</p>
-<h2 id="夜间模式">夜间模式<a hidden class="anchor" aria-hidden="true" href="#夜间模式">#</a></h2>
-<h2 id="rss">RSS<a hidden class="anchor" aria-hidden="true" href="#rss">#</a></h2>
-<p><a href="/hugo-papermod-template/index.xml">link</a></p>
-<div class="footnotes" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn:1">
-<p>这是一个脚标的栗子&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>We can surrogate the objective function by <u>introducing constraint penalty</u>:</p>
+<p>$$
+\begin{align*}
+\min_x\ &amp; c^\top x+\lambda^\top(b-Ax)\
+\text{s.t. } &amp; x\geq 0
+\end{align*}
+$$</p>
+<p>Denote $g(\lambda):=c^\top x+\lambda^\top(b-Ax)$, then $g(\lambda)\leq f(x)$ for all $\lambda$. Therefore, we need to <u>maxmize $g(\lambda)$ to obtain the tightest lower bound</u>. Notice that</p>
+<p>$$
+g(\lambda)=(c^\top-\lambda^\top A)x+\lambda^\top b=
+\begin{cases}
+-\infty, &amp; \text{if }c^\top-\lambda^\top A&lt;0;\
+\lambda^\top b, &amp; \text{if }c^\top-\lambda^\top A\geq 0.
+\end{cases}
+$$</p>
+<p>then the dual problem is</p>
+<p>$$
+\begin{align*}
+\max\ &amp; \lambda^\top b\
+\text{s.t. } &amp; \lambda^\top A\leq c^\top
+\end{align*}
+$$</p>
+<h4 id="how-to-write-the-dual-of-lp-quickly">How to write the dual of LP quickly?<a hidden class="anchor" aria-hidden="true" href="#how-to-write-the-dual-of-lp-quickly">#</a></h4>
+<p><img alt="loading-ag-149" loading="lazy" src="/img/opt3_LP_dual.png"></p>
+<h4 id="properties-of-dual">Properties of dual<a hidden class="anchor" aria-hidden="true" href="#properties-of-dual">#</a></h4>
+<p>Suppose $x^*$ and $p^*$ are the optimal solution of (P) and (D) respectively.</p>
+<ul>
+<li>
+<p><strong>Weak duality:</strong> $c^\top x^*\geq p^{*\top}b$.</p>
 </li>
-</ol>
-</div>
+<li>
+<p><strong>Strong duality:</strong> If $x^*$ is finite, then $p^*$ is finite, and $c^\top x^*= p^{*\top}b$.</p>
+<ul>
+<li><strong>Corollary:</strong> (P) unbounded $\implies$ (D) infeasible, (P) infeasible $\implies$ (D) unbounded <u> or infeasible</u>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Complementary slackness:</strong> $(x^*,p^*)$ is optimal $\iff p_i^*(a_i^\top x^*-b)=0$ and $(c_j-p_j^{*\top}A_j)x^*=0$.</p>
+</li>
+</ul>
+<h3 id="lagrangian-duality">Lagrangian duality<a hidden class="anchor" aria-hidden="true" href="#lagrangian-duality">#</a></h3>
+<p>Consider the following problem:</p>
+<p>$$
+\begin{align*}
+p^*:=\min\ &amp; f(x)\
+\text{s.t. } &amp; g_i(x)\leq 0,\ i\in[m];\
+&amp; h_j(x)=0,\ j\in[n].
+\end{align*}
+$$</p>
+<p>Its <strong>Lagrangian function</strong> is defined as</p>
+<p>$$
+L(\lambda,\mu)=\inf_x\lbrace f(x)+\sum_{i\in[m]}\lambda_i g_i(x)+\sum_{j\in[n]}\mu_j h_j(x)\rbrace
+$$</p>
+<p>Denote $d^*:=\sup\limits_{\lambda,\mu}L(\lambda,\mu)$, then $p^*\geq d^*$ by weak duality.</p>
+<p>If <u> $f(x)$ is convex</u> and local minimum satisfies some <strong>constraint qualifications</strong> (<em>abbreviated as CQs</em>), then strong duality will hold.</p>
+<p>e.g. Slater condition, LICQ, MFCQ&hellip;</p>
+<p>Note: <strong>The Lagrangian dual is always convex</strong>, and sometimes it is easier to be tackled.</p>
+<br>
+<p><strong>Def.</strong> If $(x^*,\lambda^*,\mu^*)$ satisfies</p>
+<p>$$
+\sup_{\lambda,\mu\geq 0}L(x^*,\lambda,\mu)\leq L(x^*,\lambda^*,\mu^*)
+\leq \inf_{x}L(x,\lambda^*,\mu^*)
+$$</p>
+<p>,then it is called a <u>saddle point</u>.</p>
+<p><strong>Thm.</strong> $(x^*,\lambda^*,\mu^*)$ is optimal $\iff (x^*,\lambda^*,\mu^*)$ is a saddle point.</p>
+<h4 id="content-of-kkt-condition">Content of KKT condition<a hidden class="anchor" aria-hidden="true" href="#content-of-kkt-condition">#</a></h4>
+<ul>
+<li>
+<p>$g_i(x^*)\leq 0,\ i\in[m]$ (<em>primal feasibility</em>)</p>
+</li>
+<li>
+<p>$h_j(x^*)=0,\ j\in[n]$ (<em>primal feasibility</em>)</p>
+</li>
+<li>
+<p>$\lambda_i^*\geq 0,\ i\in[m]$ (<em>dual feasibility</em>)</p>
+</li>
+<li>
+<p>$\mu_j^*\in\mathbb{R},\ j\in[n]$ (<em>dual feasibility</em>)</p>
+</li>
+<li>
+<p>$\nabla f(x^*)+\lambda^{*\top}\mathbf{J}_g(x^*)+\mu^{*\top}\mathbf{J}_h(x^*)=\mathbf{0}$ (<em>FOC of Lagrangian function</em>)</p>
+</li>
+<li>
+<p>$\lambda^{*\top}g(x^*)=0$ (<em>complementary slackness</em>)</p>
+</li>
+</ul>
+<p><strong>optimal solution $\implies$ KKT point is obvious, but the opposite direction is not easy to prove.</strong> But fortunately, if $f(x)$ is convex, then opposite direction holds.</p>
+<h3 id="conic-dual">Conic dual<a hidden class="anchor" aria-hidden="true" href="#conic-dual">#</a></h3>
+<p>The rule of constructing LP&rsquo;s dual problem can be easily applied on conic programming:</p>
+<p>$$
+\begin{align*}
+\text{(P) } \min\ &amp; c^\top x\
+\text{s.t. } &amp; Ax\succcurlyeq_{\mathcal{K}}b
+\end{align*}</p>
+<p>\</p>
+<p>\begin{align*}
+\text{(D) } \min\ &amp; p^\top b\
+\text{s.t. } &amp; p^\top A=c^\top\
+&amp; p\succcurlyeq_{\mathcal{K^*}}0
+\end{align*}
+$$</p>
+<p>where $Ax\succcurlyeq_{\mathcal{K}}b$ means $Ax-b\in\mathcal{K}$  ($\mathcal{K}$ is a cone), and $\mathcal{K}^*:=\lbrace y\ |\ y^\top x\geq 0,\ x\in\mathcal{K}\rbrace$ denotes the <u>dual cone</u>.</p>
 
 
   </div>
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://pkuim-tanyx.github.io/tags/emoji/">Emoji</a></li>
+      <li><a href="https://pkuim-tanyx.github.io/tags/opt/">Opt</a></li>
     </ul>
 <nav class="paginav">
-  <a class="prev" href="https://pkuim-tanyx.github.io/posts/test/">
-    <span class="title">« Prev</span>
+  <a class="next" href="https://pkuim-tanyx.github.io/posts/opt_note_2/">
+    <span class="title">Next »</span>
     <br>
-    <span>Test</span>
+    <span>Operational Study Notes (2)</span>
   </a>
 </nav>
 
 
 <ul class="share-buttons">
     <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share Hello World on x"
-            href="https://x.com/intent/tweet/?text=Hello%20World&amp;url=https%3a%2f%2fpkuim-tanyx.github.io%2fposts%2fhello-world%2f&amp;hashtags=emoji">
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Operational Study Notes (3) on x"
+            href="https://x.com/intent/tweet/?text=Operational%20Study%20Notes%20%283%29&amp;url=https%3a%2f%2fpkuim-tanyx.github.io%2fposts%2fopt_note_3%2f&amp;hashtags=opt">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M512 62.554 L 512 449.446 C 512 483.97 483.97 512 449.446 512 L 62.554 512 C 28.03 512 0 483.97 0 449.446 L 0 62.554 C 0 28.03 28.029 0 62.554 0 L 449.446 0 C 483.971 0 512 28.03 512 62.554 Z M 269.951 190.75 L 182.567 75.216 L 56 75.216 L 207.216 272.95 L 63.9 436.783 L 125.266 436.783 L 235.9 310.383 L 332.567 436.783 L 456 436.783 L 298.367 228.367 L 432.367 75.216 L 371.033 75.216 Z M 127.633 110 L 164.101 110 L 383.481 400.065 L 349.5 400.065 Z" />
@@ -341,8 +386,8 @@ $$</p>
         </a>
     </li>
     <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share Hello World on linkedin"
-            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fpkuim-tanyx.github.io%2fposts%2fhello-world%2f&amp;title=Hello%20World&amp;summary=Hello%20World&amp;source=https%3a%2f%2fpkuim-tanyx.github.io%2fposts%2fhello-world%2f">
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Operational Study Notes (3) on linkedin"
+            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fpkuim-tanyx.github.io%2fposts%2fopt_note_3%2f&amp;title=Operational%20Study%20Notes%20%283%29&amp;summary=Operational%20Study%20Notes%20%283%29&amp;source=https%3a%2f%2fpkuim-tanyx.github.io%2fposts%2fopt_note_3%2f">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
@@ -350,8 +395,8 @@ $$</p>
         </a>
     </li>
     <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share Hello World on reddit"
-            href="https://reddit.com/submit?url=https%3a%2f%2fpkuim-tanyx.github.io%2fposts%2fhello-world%2f&title=Hello%20World">
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Operational Study Notes (3) on reddit"
+            href="https://reddit.com/submit?url=https%3a%2f%2fpkuim-tanyx.github.io%2fposts%2fopt_note_3%2f&title=Operational%20Study%20Notes%20%283%29">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
@@ -359,8 +404,8 @@ $$</p>
         </a>
     </li>
     <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share Hello World on facebook"
-            href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fpkuim-tanyx.github.io%2fposts%2fhello-world%2f">
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Operational Study Notes (3) on facebook"
+            href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fpkuim-tanyx.github.io%2fposts%2fopt_note_3%2f">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
@@ -368,8 +413,8 @@ $$</p>
         </a>
     </li>
     <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share Hello World on whatsapp"
-            href="https://api.whatsapp.com/send?text=Hello%20World%20-%20https%3a%2f%2fpkuim-tanyx.github.io%2fposts%2fhello-world%2f">
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Operational Study Notes (3) on whatsapp"
+            href="https://api.whatsapp.com/send?text=Operational%20Study%20Notes%20%283%29%20-%20https%3a%2f%2fpkuim-tanyx.github.io%2fposts%2fopt_note_3%2f">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
@@ -377,8 +422,8 @@ $$</p>
         </a>
     </li>
     <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share Hello World on telegram"
-            href="https://telegram.me/share/url?text=Hello%20World&amp;url=https%3a%2f%2fpkuim-tanyx.github.io%2fposts%2fhello-world%2f">
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Operational Study Notes (3) on telegram"
+            href="https://telegram.me/share/url?text=Operational%20Study%20Notes%20%283%29&amp;url=https%3a%2f%2fpkuim-tanyx.github.io%2fposts%2fopt_note_3%2f">
             <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
@@ -386,8 +431,8 @@ $$</p>
         </a>
     </li>
     <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share Hello World on ycombinator"
-            href="https://news.ycombinator.com/submitlink?t=Hello%20World&u=https%3a%2f%2fpkuim-tanyx.github.io%2fposts%2fhello-world%2f">
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Operational Study Notes (3) on ycombinator"
+            href="https://news.ycombinator.com/submitlink?t=Operational%20Study%20Notes%20%283%29&u=https%3a%2f%2fpkuim-tanyx.github.io%2fposts%2fopt_note_3%2f">
             <svg version="1.1" xml:space="preserve" width="30px" height="30px" viewBox="0 0 512 512" fill="currentColor"
                 xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
                 <path
