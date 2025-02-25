@@ -199,9 +199,9 @@
   </header>
   <div class="entry-content">
     <p>Dual Theory of LP Origin of dual problem Consider a LP with standard form:
-$$ \begin{align*} \min\ &amp; c^\top x\ \text{s.t. } &amp; Ax=b\ &amp; x\geq 0 \end{align*} $$
+$$ \begin{align*} \min\ &amp; c^\top x\\ \text{s.t. } &amp; Ax=b\\ &amp; x\geq 0 \end{align*} $$
 We can surrogate the objective function by introducing constraint penalty:
-$$ \begin{align*} \min_x\ &amp; c^\top x&#43;\lambda^\top(b-Ax)\ \text{s.t. } &amp; x\geq 0 \end{align*} $$
+$$ \begin{align*} \min_x\ &amp; c^\top x&#43;\lambda^\top(b-Ax)\\ \text{s.t. } &amp; x\geq 0 \end{align*} $$
 Denote $g(\lambda):=c^\top x&#43;\lambda^\top(b-Ax)$, then $g(\lambda)\leq f(x)$ for all $\lambda$. Therefore, we need to maxmize $g(\lambda)$ to obtain the tightest lower bound. Notice that
 ...</p>
   </div>

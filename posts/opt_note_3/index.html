@@ -100,8 +100,8 @@
   "keywords": [
     "opt"
   ],
-  "articleBody": "Dual Theory of LP Origin of dual problem Consider a LP with standard form:\n$$ \\begin{align*} \\min\\ \u0026 c^\\top x\\ \\text{s.t. } \u0026 Ax=b\\ \u0026 x\\geq 0 \\end{align*} $$\nWe can surrogate the objective function by introducing constraint penalty:\n$$ \\begin{align*} \\min_x\\ \u0026 c^\\top x+\\lambda^\\top(b-Ax)\\ \\text{s.t. } \u0026 x\\geq 0 \\end{align*} $$\nDenote $g(\\lambda):=c^\\top x+\\lambda^\\top(b-Ax)$, then $g(\\lambda)\\leq f(x)$ for all $\\lambda$. Therefore, we need to maxmize $g(\\lambda)$ to obtain the tightest lower bound. Notice that\n$$ g(\\lambda)=(c^\\top-\\lambda^\\top A)x+\\lambda^\\top b= \\begin{cases} -\\infty, \u0026 \\text{if }c^\\top-\\lambda^\\top A\u003c0;\\ \\lambda^\\top b, \u0026 \\text{if }c^\\top-\\lambda^\\top A\\geq 0. \\end{cases} $$\nthen the dual problem is\n$$ \\begin{align*} \\max\\ \u0026 \\lambda^\\top b\\ \\text{s.t. } \u0026 \\lambda^\\top A\\leq c^\\top \\end{align*} $$\nHow to write the dual of LP quickly? Properties of dual Suppose $x^*$ and $p^*$ are the optimal solution of (P) and (D) respectively.\nWeak duality: $c^\\top x^*\\geq p^{*\\top}b$.\nStrong duality: If $x^*$ is finite, then $p^*$ is finite, and $c^\\top x^*= p^{*\\top}b$.\nCorollary: (P) unbounded $\\implies$ (D) infeasible, (P) infeasible $\\implies$ (D) unbounded or infeasible. Complementary slackness: $(x^*,p^*)$ is optimal $\\iff p_i^*(a_i^\\top x^*-b)=0$ and $(c_j-p_j^{*\\top}A_j)x^*=0$.\nLagrangian duality Consider the following problem:\n$$ \\begin{align*} p^*:=\\min\\ \u0026 f(x)\\ \\text{s.t. } \u0026 g_i(x)\\leq 0,\\ i\\in[m];\\ \u0026 h_j(x)=0,\\ j\\in[n]. \\end{align*} $$\nIts Lagrangian function is defined as\n$$ L(\\lambda,\\mu)=\\inf_x\\lbrace f(x)+\\sum_{i\\in[m]}\\lambda_i g_i(x)+\\sum_{j\\in[n]}\\mu_j h_j(x)\\rbrace $$\nDenote $d^*:=\\sup\\limits_{\\lambda,\\mu}L(\\lambda,\\mu)$, then $p^*\\geq d^*$ by weak duality.\nIf $f(x)$ is convex and local minimum satisfies some constraint qualifications (abbreviated as CQs), then strong duality will hold.\ne.g. Slater condition, LICQ, MFCQ…\nNote: The Lagrangian dual is always convex, and sometimes it is easier to be tackled.\nDef. If $(x^*,\\lambda^*,\\mu^*)$ satisfies\n$$ \\sup_{\\lambda,\\mu\\geq 0}L(x^*,\\lambda,\\mu)\\leq L(x^*,\\lambda^*,\\mu^*) \\leq \\inf_{x}L(x,\\lambda^*,\\mu^*) $$\n,then it is called a saddle point.\nThm. $(x^*,\\lambda^*,\\mu^*)$ is optimal $\\iff (x^*,\\lambda^*,\\mu^*)$ is a saddle point.\nContent of KKT condition $g_i(x^*)\\leq 0,\\ i\\in[m]$ (primal feasibility)\n$h_j(x^*)=0,\\ j\\in[n]$ (primal feasibility)\n$\\lambda_i^*\\geq 0,\\ i\\in[m]$ (dual feasibility)\n$\\mu_j^*\\in\\mathbb{R},\\ j\\in[n]$ (dual feasibility)\n$\\nabla f(x^*)+\\lambda^{*\\top}\\mathbf{J}_g(x^*)+\\mu^{*\\top}\\mathbf{J}_h(x^*)=\\mathbf{0}$ (FOC of Lagrangian function)\n$\\lambda^{*\\top}g(x^*)=0$ (complementary slackness)\noptimal solution $\\implies$ KKT point is obvious, but the opposite direction is not easy to prove. But fortunately, if $f(x)$ is convex, then opposite direction holds.\nConic dual The rule of constructing LP’s dual problem can be easily applied on conic programming:\n$$ \\begin{align*} \\text{(P) } \\min\\ \u0026 c^\\top x\\ \\text{s.t. } \u0026 Ax\\succcurlyeq_{\\mathcal{K}}b \\end{align*}\n\\\n\\begin{align*} \\text{(D) } \\min\\ \u0026 p^\\top b\\ \\text{s.t. } \u0026 p^\\top A=c^\\top\\ \u0026 p\\succcurlyeq_{\\mathcal{K^*}}0 \\end{align*} $$\nwhere $Ax\\succcurlyeq_{\\mathcal{K}}b$ means $Ax-b\\in\\mathcal{K}$ ($\\mathcal{K}$ is a cone), and $\\mathcal{K}^*:=\\lbrace y\\ |\\ y^\\top x\\geq 0,\\ x\\in\\mathcal{K}\\rbrace$ denotes the dual cone.\n",
-  "wordCount" : "411",
+  "articleBody": "Dual Theory of LP Origin of dual problem Consider a LP with standard form:\n$$ \\begin{align*} \\min\\ \u0026 c^\\top x\\\\ \\text{s.t. } \u0026 Ax=b\\\\ \u0026 x\\geq 0 \\end{align*} $$\nWe can surrogate the objective function by introducing constraint penalty:\n$$ \\begin{align*} \\min_x\\ \u0026 c^\\top x+\\lambda^\\top(b-Ax)\\\\ \\text{s.t. } \u0026 x\\geq 0 \\end{align*} $$\nDenote $g(\\lambda):=c^\\top x+\\lambda^\\top(b-Ax)$, then $g(\\lambda)\\leq f(x)$ for all $\\lambda$. Therefore, we need to maxmize $g(\\lambda)$ to obtain the tightest lower bound. Notice that\n$$ g(\\lambda)=(c^\\top-\\lambda^\\top A)x+\\lambda^\\top b= \\begin{cases} -\\infty, \u0026 \\text{if }c^\\top-\\lambda^\\top A\u003c0;\\\\ \\lambda^\\top b, \u0026 \\text{if }c^\\top-\\lambda^\\top A\\geq 0. \\end{cases} $$\nthen the dual problem is\n$$ \\begin{align*} \\max\\ \u0026 \\lambda^\\top b\\\\ \\text{s.t. } \u0026 \\lambda^\\top A\\leq c^\\top \\end{align*} $$\nHow to write the dual of LP quickly? Properties of dual Suppose $x^*$ and $p^*$ are the optimal solution of (P) and (D) respectively.\nWeak duality: $c^\\top x^*\\geq p^{*\\top}b$.\nStrong duality: If $x^*$ is finite, then $p^*$ is finite, and $c^\\top x^*= p^{*\\top}b$.\nCorollary: (P) unbounded $\\implies$ (D) infeasible, (P) infeasible $\\implies$ (D) unbounded or infeasible. Complementary slackness: $(x^*,p^*)$ is optimal $\\iff p_i^*(a_i^\\top x^*-b)=0$ and $(c_j-p_j^{*\\top}A_j)x^*=0$.\nLagrangian duality Consider the following problem:\n$$ \\begin{align*} p^*:=\\min\\ \u0026 f(x)\\\\ \\text{s.t. } \u0026 g_i(x)\\leq 0,\\ i\\in[m];\\\\ \u0026 h_j(x)=0,\\ j\\in[n]. \\end{align*} $$\nIts Lagrangian function is defined as\n$$ L(\\lambda,\\mu)=\\inf_x\\left\\lbrace f(x)+\\sum_{i\\in[m]}\\lambda_i g_i(x)+\\sum_{j\\in[n]}\\mu_j h_j(x)\\right\\rbrace $$\nDenote $d^*:=\\sup\\limits_{\\lambda,\\mu}L(\\lambda,\\mu)$, then $p^*\\geq d^*$ by weak duality.\nIf $f(x)$ is convex and local minimum satisfies some constraint qualifications (abbreviated as CQs), then strong duality will hold.\ne.g. Slater condition, LICQ, MFCQ…\nNote: The Lagrangian dual is always convex, and sometimes it is easier to be tackled.\nDef. If $(x^*,\\lambda^*,\\mu^*)$ satisfies\n$$ \\sup_{\\lambda,\\mu\\geq 0}L(x^*,\\lambda,\\mu)\\leq L(x^*,\\lambda^*,\\mu^*) \\leq \\inf_{x}L(x,\\lambda^*,\\mu^*) $$\n,then it is called a saddle point.\nThm. $(x^*,\\lambda^*,\\mu^*)$ is optimal $\\iff (x^*,\\lambda^*,\\mu^*)$ is a saddle point.\nContent of KKT condition $g_i(x^*)\\leq 0,\\ i\\in[m]$ (primal feasibility)\n$h_j(x^*)=0,\\ j\\in[n]$ (primal feasibility)\n$\\lambda_i^*\\geq 0,\\ i\\in[m]$ (dual feasibility)\n$\\mu_j^*\\in\\mathbb{R},\\ j\\in[n]$ (dual feasibility)\n$\\nabla f(x^*)+\\sum_{i\\in[m]}\\lambda^*_i \\nabla g_i(x^*)+\\sum_{j\\in[n]}\\mu^*_j \\nabla h_j(x^*)=\\mathbf{0}$ (FOC of Lagrangian function)\n$\\lambda^{*\\top}g(x^*)=0$ (complementary slackness)\noptimal solution $\\implies$ KKT point is obvious, but the opposite direction is not easy to prove. But fortunately, if $f(x)$ is convex, then opposite direction holds.\nConic dual The rule of constructing LP’s dual problem can be easily applied on conic programming:\n$$ \\begin{align*} \\text{(P) } \\min\\ \u0026 c^\\top x\\\\ \\text{s.t. } \u0026 Ax\\succcurlyeq_{\\mathcal{K}}b \\end{align*}\n\\begin{align*} \\text{(D) } \\min\\ \u0026 p^\\top b\\\\ \\text{s.t. } \u0026 p^\\top A=c^\\top\\\\ \u0026 p\\succcurlyeq_{\\mathcal{K^*}}0 \\end{align*} $$\nwhere $Ax\\succcurlyeq_{\\mathcal{K}}b$ means $Ax-b\\in\\mathcal{K}$ ($\\mathcal{K}$ is a cone), and $\\mathcal{K}^*:=\\lbrace y\\ |\\ y^\\top x\\geq 0,\\ x\\in\\mathcal{K}\\rbrace$ denotes the dual cone.\n",
+  "wordCount" : "414",
   "inLanguage": "en",
   "datePublished": "2025-02-24T00:00:00Z",
   "dateModified": "2025-02-24T00:00:00Z",
@@ -251,15 +251,15 @@
 <p>Consider a LP with standard form:</p>
 <p>$$
 \begin{align*}
-\min\ &amp; c^\top x\
-\text{s.t. } &amp; Ax=b\
+\min\ &amp; c^\top x\\
+\text{s.t. } &amp; Ax=b\\
 &amp; x\geq 0
 \end{align*}
 $$</p>
 <p>We can surrogate the objective function by <u>introducing constraint penalty</u>:</p>
 <p>$$
 \begin{align*}
-\min_x\ &amp; c^\top x+\lambda^\top(b-Ax)\
+\min_x\ &amp; c^\top x+\lambda^\top(b-Ax)\\
 \text{s.t. } &amp; x\geq 0
 \end{align*}
 $$</p>
@@ -267,14 +267,14 @@ $$</p>
 <p>$$
 g(\lambda)=(c^\top-\lambda^\top A)x+\lambda^\top b=
 \begin{cases}
--\infty, &amp; \text{if }c^\top-\lambda^\top A&lt;0;\
+-\infty, &amp; \text{if }c^\top-\lambda^\top A&lt;0;\\
 \lambda^\top b, &amp; \text{if }c^\top-\lambda^\top A\geq 0.
 \end{cases}
 $$</p>
 <p>then the dual problem is</p>
 <p>$$
 \begin{align*}
-\max\ &amp; \lambda^\top b\
+\max\ &amp; \lambda^\top b\\
 \text{s.t. } &amp; \lambda^\top A\leq c^\top
 \end{align*}
 $$</p>
@@ -300,14 +300,14 @@ $$</p>
 <p>Consider the following problem:</p>
 <p>$$
 \begin{align*}
-p^*:=\min\ &amp; f(x)\
-\text{s.t. } &amp; g_i(x)\leq 0,\ i\in[m];\
+p^*:=\min\ &amp; f(x)\\
+\text{s.t. } &amp; g_i(x)\leq 0,\ i\in[m];\\
 &amp; h_j(x)=0,\ j\in[n].
 \end{align*}
 $$</p>
 <p>Its <strong>Lagrangian function</strong> is defined as</p>
 <p>$$
-L(\lambda,\mu)=\inf_x\lbrace f(x)+\sum_{i\in[m]}\lambda_i g_i(x)+\sum_{j\in[n]}\mu_j h_j(x)\rbrace
+L(\lambda,\mu)=\inf_x\left\lbrace f(x)+\sum_{i\in[m]}\lambda_i g_i(x)+\sum_{j\in[n]}\mu_j h_j(x)\right\rbrace
 $$</p>
 <p>Denote $d^*:=\sup\limits_{\lambda,\mu}L(\lambda,\mu)$, then $p^*\geq d^*$ by weak duality.</p>
 <p>If <u> $f(x)$ is convex</u> and local minimum satisfies some <strong>constraint qualifications</strong> (<em>abbreviated as CQs</em>), then strong duality will hold.</p>
@@ -336,7 +336,7 @@ $$</p>
 <p>$\mu_j^*\in\mathbb{R},\ j\in[n]$ (<em>dual feasibility</em>)</p>
 </li>
 <li>
-<p>$\nabla f(x^*)+\lambda^{*\top}\mathbf{J}_g(x^*)+\mu^{*\top}\mathbf{J}_h(x^*)=\mathbf{0}$ (<em>FOC of Lagrangian function</em>)</p>
+<p>$\nabla f(x^*)+\sum_{i\in[m]}\lambda^*_i \nabla g_i(x^*)+\sum_{j\in[n]}\mu^*_j \nabla h_j(x^*)=\mathbf{0}$ (<em>FOC of Lagrangian function</em>)</p>
 </li>
 <li>
 <p>$\lambda^{*\top}g(x^*)=0$ (<em>complementary slackness</em>)</p>
@@ -347,13 +347,12 @@ $$</p>
 <p>The rule of constructing LP&rsquo;s dual problem can be easily applied on conic programming:</p>
 <p>$$
 \begin{align*}
-\text{(P) } \min\ &amp; c^\top x\
+\text{(P) } \min\ &amp; c^\top x\\
 \text{s.t. } &amp; Ax\succcurlyeq_{\mathcal{K}}b
 \end{align*}</p>
-<p>\</p>
 <p>\begin{align*}
-\text{(D) } \min\ &amp; p^\top b\
-\text{s.t. } &amp; p^\top A=c^\top\
+\text{(D) } \min\ &amp; p^\top b\\
+\text{s.t. } &amp; p^\top A=c^\top\\
 &amp; p\succcurlyeq_{\mathcal{K^*}}0
 \end{align*}
 $$</p>
