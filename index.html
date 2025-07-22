@@ -194,6 +194,26 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">如何在本站上传文件
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>本网站使用Hugo框架搭建而成，上传文章的步骤如下：
+在网站根目录（例如myblog）下执行命令hugo new posts/[file_name].md，生成的markdown文件将存放在myblog/content/posts目录下。
+使用markdown编辑器编辑文件内容，注意文件头中的draft字段要设置为false，title（标题）、description（副标题）、author、tags、math(boolean)等字段的值可按需设置。
+在网站根目录下执行命令hugo，生成静态资源。（注意：如果想在本地预览，需执行hugo server命令，但在上传至Github前务必再执行一次hugo命令）
+将资源上传至Github仓库，即在myblog/public文件夹下打开git bash，然后依次执行以下命令：
+git add .
+git commit -m [instruction]
+git push origin main
+一些补充说明： 上传图片时，需要将路径设置为/img/[pic_name]； 设置注释时，注释记号为[^[note_operator]]，后文的注释内容为[^[note_operator]]: [note_content]； 本网站使用mathjax渲染$\LaTeX$公式，但$\LaTeX$的部分语法与HTML/JS语法不兼容（例如：大括号只能用\lbrace、\rbrace表示，不能使用\{、\}），在书写大量公式时需要注意。 </p>
+  </div>
+  <footer class="entry-footer"><span title='2025-07-22 00:00:00 +0000 UTC'>July 22, 2025</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Ziyuxiao</footer>
+  <a class="entry-link" aria-label="post link to 如何在本站上传文件" href="https://pkuim-tanyx.github.io/posts/how_to_post_an_article/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Operational Study Notes (3)
     </h2>
   </header>
@@ -290,20 +310,6 @@ ITDP（Institute for Transportation and Development Policy, 交通与发展政�
   </div>
   <footer class="entry-footer"><span title='2025-01-29 00:00:00 +0000 UTC'>January 29, 2025</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Ziyuxiao</footer>
   <a class="entry-link" aria-label="post link to 好的快速公交是如何炼成的？" href="https://pkuim-tanyx.github.io/posts/chengdu_brt/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Test
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Introduction This is bold text, and this is emphasized text.
-Visit the Hugo website!
-</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-01-27 00:00:00 +0000 UTC'>January 27, 2025</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Ziyuxiao</footer>
-  <a class="entry-link" aria-label="post link to Test" href="https://pkuim-tanyx.github.io/posts/test/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

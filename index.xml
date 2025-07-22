@@ -6,8 +6,48 @@
     <description>Recent content on Ziyuxiao 子羽翛</description>
     <generator>Hugo -- 0.142.0</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 24 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Jul 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://pkuim-tanyx.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何在本站上传文件</title>
+      <link>https://pkuim-tanyx.github.io/posts/how_to_post_an_article/</link>
+      <pubDate>Tue, 22 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://pkuim-tanyx.github.io/posts/how_to_post_an_article/</guid>
+      <description>&lt;p&gt;本网站使用&lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt;框架搭建而成，上传文章的步骤如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;在网站根目录（例如&lt;code&gt;myblog&lt;/code&gt;）下执行命令&lt;code&gt;hugo new posts/[file_name].md&lt;/code&gt;，生成的&lt;code&gt;markdown&lt;/code&gt;文件将存放在&lt;code&gt;myblog/content/posts&lt;/code&gt;目录下。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用&lt;code&gt;markdown&lt;/code&gt;编辑器编辑文件内容，注意文件头中的&lt;code&gt;draft&lt;/code&gt;字段要设置为&lt;code&gt;false&lt;/code&gt;，&lt;code&gt;title&lt;/code&gt;（标题）、&lt;code&gt;description&lt;/code&gt;（副标题）、&lt;code&gt;author&lt;/code&gt;、&lt;code&gt;tags&lt;/code&gt;、&lt;code&gt;math(boolean)&lt;/code&gt;等字段的值可按需设置。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在网站根目录下执行命令&lt;code&gt;hugo&lt;/code&gt;，生成静态资源。&lt;strong&gt;（注意：如果想在本地预览，需执行&lt;code&gt;hugo server&lt;/code&gt;命令，但在上传至&lt;code&gt;Github&lt;/code&gt;前务必再执行一次&lt;code&gt;hugo&lt;/code&gt;命令）&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;将资源上传至&lt;code&gt;Github&lt;/code&gt;仓库，即在&lt;code&gt;myblog/public&lt;/code&gt;文件夹下打开&lt;code&gt;git bash&lt;/code&gt;，然后依次执行以下命令：&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;git add .&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;git commit -m [instruction]&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;git push origin main&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;一些补充说明：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;上传图片时，需要将路径设置为&lt;code&gt;/img/[pic_name]&lt;/code&gt;；&lt;/li&gt;
+&lt;li&gt;设置注释时，注释记号为&lt;code&gt;[^[note_operator]]&lt;/code&gt;，后文的注释内容为&lt;code&gt;[^[note_operator]]: [note_content]&lt;/code&gt;；&lt;/li&gt;
+&lt;li&gt;本网站使用&lt;code&gt;mathjax&lt;/code&gt;渲染$\LaTeX$公式，但$\LaTeX$的部分语法与&lt;code&gt;HTML/JS&lt;/code&gt;语法不兼容（例如：大括号只能用&lt;code&gt;\lbrace&lt;/code&gt;、&lt;code&gt;\rbrace&lt;/code&gt;表示，不能使用&lt;code&gt;\{&lt;/code&gt;、&lt;code&gt;\}&lt;/code&gt;），在书写大量公式时需要注意。&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
     <item>
       <title>Operational Study Notes (3)</title>
       <link>https://pkuim-tanyx.github.io/posts/opt_note_3/</link>
